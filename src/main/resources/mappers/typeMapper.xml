@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fh.springboot_shop.dao.TypeDao">
+
+    <select id="queryData"  resultType="com.fh.springboot_shop.model.po.TypeShop">
+            select * from t_shop_type where 1=1 and isDel=0
+
+    </select>
+
+
+    <select id="getDataByPid" parameterType="java.lang.Integer" resultType="com.fh.springboot_shop.model.po.TypeShop">
+            select * from t_shop_type where pid=#{pid}
+
+    </select>
+
+    <insert id="add"  useGeneratedKeys="true"
+            keyColumn="id"
+            keyProperty="id" parameterType="com.fh.springboot_shop.model.po.TypeShop">
+        insert into t_shop_type(name,pid,createDate,updateDate,isDel) value (#{name},#{pid},#{createDate},sysdate(),#{isDel})
+    </insert>
+
+    <update id="update" parameterType="com.fh.springboot_shop.model.po.TypeShop">
+    update t_shop_type set name=#{name},pid=#{pid},updateDate=#{updateDate},isDel=#{isDel} where id=#{id}
+    </update>
+
+
+</mapper>
