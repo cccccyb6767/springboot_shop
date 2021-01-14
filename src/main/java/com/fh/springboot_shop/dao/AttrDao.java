@@ -1,6 +1,7 @@
 package com.fh.springboot_shop.dao;
 
 import com.fh.springboot_shop.model.po.Brand;
+import com.fh.springboot_shop.model.po.shop_Attribute;
 import com.fh.springboot_shop.model.vo.BrandParam;
 
 import java.util.List;
@@ -13,4 +14,6 @@ public interface AttrDao {
     Long queryCount(BrandParam brandParam);
 
     List<Brand> queryListParams(BrandParam brandParam);
+
+    void addAttribute(shop_Attribute attr);
 }

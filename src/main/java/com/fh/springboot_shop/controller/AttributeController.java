@@ -1,10 +1,13 @@
 package com.fh.springboot_shop.controller;
 
+import com.fh.springboot_shop.model.po.Brand;
+import com.fh.springboot_shop.model.po.shop_Attribute;
 import com.fh.springboot_shop.model.vo.BrandParam;
 import com.fh.springboot_shop.service.AttrService;
 import com.fh.springboot_shop.utils.ReturnData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -33,5 +36,11 @@ public class AttributeController {
         return ReturnData.successs(map);
     }
 
+
+    @PostMapping("addAttribute")
+    public ReturnData addAttribute(shop_Attribute attr){
+        attrService.addAttribute(attr);
+        return ReturnData.successs("success");
+    }
 
 }

@@ -2,6 +2,7 @@ package com.fh.springboot_shop.service.impl;
 
 import com.fh.springboot_shop.dao.AttrDao;
 import com.fh.springboot_shop.model.po.Brand;
+import com.fh.springboot_shop.model.po.shop_Attribute;
 import com.fh.springboot_shop.model.vo.BrandParam;
 import com.fh.springboot_shop.service.AttrService;
 import org.springframework.stereotype.Service;
@@ -29,5 +30,10 @@ public class AttrServiceImpl implements AttrService {
         List<Brand> brands = attrDao.queryListParams(brandParam);
         map.put("data",brands);
         return map;
+    }
+
+    @Override
+    public void addAttribute(shop_Attribute attr) {
+        attrDao.addAttribute(attr);
     }
 }

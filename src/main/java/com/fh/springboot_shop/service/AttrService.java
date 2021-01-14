@@ -1,5 +1,6 @@
 package com.fh.springboot_shop.service;
 
+import com.fh.springboot_shop.model.po.shop_Attribute;
 import com.fh.springboot_shop.model.vo.BrandParam;
 
 import java.util.Map;
@@ -10,4 +11,6 @@ import java.util.Map;
  */
 public interface AttrService {
     Map queryAttribute(BrandParam brandParam);
+    void addAttribute(shop_Attribute attr);
+
 }
