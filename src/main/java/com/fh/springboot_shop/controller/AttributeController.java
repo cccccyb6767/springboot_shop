@@ -6,10 +6,7 @@ import com.fh.springboot_shop.model.vo.BrandParam;
 import com.fh.springboot_shop.service.AttrService;
 import com.fh.springboot_shop.utils.ReturnData;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
@@ -48,6 +45,14 @@ public class AttributeController {
         shop_Attribute attr = attrService.queryAttrById(id);
         return ReturnData.successs(attr);
     }
+
+
+    @PostMapping("updateAttr")
+    public ReturnData updateAttr(shop_Attribute attr){
+        attrService.updateAttr(attr);
+        return ReturnData.successs("success");
+    }
+
 
 
 

@@ -14,4 +14,6 @@ public interface AttrService {
     void addAttribute(shop_Attribute attr);
 
     shop_Attribute queryAttrById(Integer id);
+
+    void updateAttr(shop_Attribute attr);
 }
