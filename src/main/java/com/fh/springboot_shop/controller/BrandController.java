@@ -52,7 +52,10 @@ public class BrandController {
         return ReturnData.successs("success");
     }
 
-
-
+    @DeleteMapping("delBrand")
+    public ReturnData delBrand(Integer id){
+        brandService.delBrand(id);
+        return ReturnData.successs("success");
+    }
 
 }

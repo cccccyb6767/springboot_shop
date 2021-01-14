@@ -22,7 +22,7 @@
 
 
     <insert id="addBrand" parameterType="com.fh.springboot_shop.model.po.Brand">
-            insert into t_shop_brand (id,name,bandE,imgPath,bandDesc,ord,isdel,createDate,updateDate,author) value(#{id},#{name},#{bandE},#{imgPath},#{bandDesc},#{ord},#{isDel},sysdate(),sysdate(),#{author})
+            insert into t_shop_brand (name,bandE,imgPath,bandDesc,ord,isdel,createDate,updateDate,author) value(#{name},#{bandE},#{imgPath},#{bandDesc},#{ord},#{isDel},sysdate(),sysdate(),#{author})
     </insert>
 
     <select id="queryBrandById" parameterType="java.lang.Integer" resultType="com.fh.springboot_shop.model.po.Brand">
@@ -32,6 +32,10 @@
     <update id="updateBrand" parameterType="com.fh.springboot_shop.model.po.Brand" >
         update t_shop_brand set name=#{name},bandE=#{bandE},imgPath=#{imgPath},bandDesc=#{bandDesc},ord=#{ord},isdel=#{isDel},updateDate=sysdate(),author=#{author} where id=#{id}
     </update>
+
+    <delete id="delBrand" parameterType="java.lang.Integer" >
+        update t_shop_brand set isdel = 1 where id=#{id}
+    </delete>
 
 
 </mapper>

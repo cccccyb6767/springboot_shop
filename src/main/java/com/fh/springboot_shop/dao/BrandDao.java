@@ -20,4 +20,6 @@ public interface BrandDao {
     Brand queryBrandById(Integer id);
 
     void updateBrand(Brand brand);
+
+    void delBrand(Integer id);
 }
