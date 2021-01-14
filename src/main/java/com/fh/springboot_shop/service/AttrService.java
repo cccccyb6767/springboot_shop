@@ -1,0 +1,13 @@
+package com.fh.springboot_shop.service;
+
+import com.fh.springboot_shop.model.vo.BrandParam;
+
+import java.util.Map;
+
+/**
+ * @author yiboChen
+ * @create 2021-01-14 21:22
+ */
+public interface AttrService {
+    Map queryAttribute(BrandParam brandParam);
+}
