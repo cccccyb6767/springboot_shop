@@ -20,4 +20,6 @@ public interface AttrDao {
     shop_Attribute queryAttrById(Integer id);
 
     void updateAttr(shop_Attribute attr);
+
+    void delAttribute(Integer id);
 }

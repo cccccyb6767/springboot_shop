@@ -46,4 +46,9 @@ public class AttrServiceImpl implements AttrService {
     public void updateAttr(shop_Attribute attr) {
         attrDao.updateAttr(attr);
     }
+
+    @Override
+    public void delAttribute(Integer id) {
+        attrDao.delAttribute(id);
+    }
 }

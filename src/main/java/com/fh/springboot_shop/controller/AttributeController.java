@@ -53,6 +53,12 @@ public class AttributeController {
         return ReturnData.successs("success");
     }
 
+    @DeleteMapping("delAttribute")
+    public ReturnData delAttribute(Integer id){
+        attrService.delAttribute(id);
+        return ReturnData.successs("success");
+    }
+
 
 
 

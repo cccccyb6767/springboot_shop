@@ -26,4 +26,9 @@
     </update>
 
 
+    <delete id="delAttribute" parameterType="java.lang.Integer">
+         update t_shop_attribute set isDel = 1 where id=#{id}
+    </delete>
+
+
 </mapper>
