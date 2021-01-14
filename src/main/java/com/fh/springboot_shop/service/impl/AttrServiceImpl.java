@@ -36,4 +36,9 @@ public class AttrServiceImpl implements AttrService {
     public void addAttribute(shop_Attribute attr) {
         attrDao.addAttribute(attr);
     }
+
+    @Override
+    public shop_Attribute queryAttrById(Integer id) {
+        return attrDao.queryAttrById(id);
+    }
 }

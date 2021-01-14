@@ -16,4 +16,6 @@ public interface AttrDao {
     List<Brand> queryListParams(BrandParam brandParam);
 
     void addAttribute(shop_Attribute attr);
+
+    shop_Attribute queryAttrById(Integer id);
 }

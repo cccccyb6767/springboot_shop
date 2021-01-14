@@ -13,4 +13,5 @@ public interface AttrService {
     Map queryAttribute(BrandParam brandParam);
     void addAttribute(shop_Attribute attr);
 
+    shop_Attribute queryAttrById(Integer id);
 }

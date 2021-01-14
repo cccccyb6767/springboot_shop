@@ -17,4 +17,9 @@
         insert into t_shop_attribute (name,nameCH,typeId,type,isSKU,isDel,createDate,updateDate,author) value(#{name},#{nameCH},#{typeId},#{type},#{isSKU},#{isDel},sysdate(),sysdate(),#{author})
     </insert>
 
+    <select id="queryAttrById" parameterType="java.lang.Integer" resultType="com.fh.springboot_shop.model.po.shop_Attribute">
+        select * from t_shop_attribute where id=#{id}
+    </select>
+
+
 </mapper>

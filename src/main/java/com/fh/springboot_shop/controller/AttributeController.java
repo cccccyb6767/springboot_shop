@@ -43,4 +43,12 @@ public class AttributeController {
         return ReturnData.successs("success");
     }
 
+    @GetMapping("queryAttrById")
+    public ReturnData queryAttrById(Integer id){
+        shop_Attribute attr = attrService.queryAttrById(id);
+        return ReturnData.successs(attr);
+    }
+
+
+
 }
