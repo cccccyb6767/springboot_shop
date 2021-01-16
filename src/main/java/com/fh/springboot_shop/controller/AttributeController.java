@@ -16,6 +16,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("api/attr/")
+@CrossOrigin
 public class AttributeController {
 
     @Autowired

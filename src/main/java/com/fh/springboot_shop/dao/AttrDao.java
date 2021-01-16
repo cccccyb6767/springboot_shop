@@ -13,7 +13,7 @@ import java.util.List;
 public interface AttrDao {
     Long queryCount(BrandParam brandParam);
 
-    List<Brand> queryListParams(BrandParam brandParam);
+    List<shop_Attribute> queryListParams(BrandParam brandParam);
 
     void addAttribute(shop_Attribute attr);
 

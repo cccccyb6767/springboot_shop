@@ -27,7 +27,7 @@ public class AttrServiceImpl implements AttrService {
         Map map = new HashMap();
         Long count = attrDao.queryCount(brandParam);
         map.put("count",count);
-        List<Brand> brands = attrDao.queryListParams(brandParam);
+        List<shop_Attribute> brands = attrDao.queryListParams(brandParam);
         map.put("data",brands);
         return map;
     }
