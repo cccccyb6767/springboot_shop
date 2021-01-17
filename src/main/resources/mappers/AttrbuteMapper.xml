@@ -4,11 +4,15 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.fh.springboot_shop.dao.AttrDao">
     <select id="queryCount" parameterType="com.fh.springboot_shop.model.vo.BrandParam" resultType="java.lang.Long">
-        select count(*) from t_shop_attribute where 1=1 and isDel=0
+        select count(*) from
+            t_shop_attribute att  left join t_shop_type t on att.typeId = t.id
+        where 1=1 and isDel=0
     </select>
 
     <select id="queryListParams" parameterType="com.fh.springboot_shop.model.vo.BrandParam" resultType="com.fh.springboot_shop.model.po.shop_Attribute">
-        select * from t_shop_attribute where 2=2 and isDel=0
+       SELECT att.id,att.nameCH as name,t.`name` as typeName,att.isSKU,att.type
+         from t_shop_attribute att LEFT JOIN t_shop_type t on att.typeId=t.id
+         where 3=3 and isDel = 0
         limit ${size*(start-1)},#{size}
     </select>
 
