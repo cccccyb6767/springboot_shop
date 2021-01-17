@@ -42,5 +42,10 @@ public class TypeServiceImpl implements TypeService {
         typeDao.update(typeShop);
     }
 
+    @Override
+    public void delType(Integer id) {
+        typeDao.delType(id);
+    }
+
 
 }

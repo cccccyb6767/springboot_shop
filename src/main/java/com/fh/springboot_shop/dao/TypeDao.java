@@ -18,4 +18,6 @@ public interface TypeDao {
     void add(TypeShop typeShop);
 
     void update(TypeShop typeShop);
+
+    void delType(Integer id);
 }

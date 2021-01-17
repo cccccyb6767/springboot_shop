@@ -2,6 +2,7 @@ package com.fh.springboot_shop.controller;
 
 import com.fh.springboot_shop.model.po.TypeShop;
 import com.fh.springboot_shop.service.TypeService;
+import com.fh.springboot_shop.utils.ReturnData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -104,7 +105,11 @@ public Map update(TypeShop typeShop){
 }
 
 
-
+@DeleteMapping("delType")
+public ReturnData delType(Integer id){
+    typeService.delType(id);
+ return ReturnData.successs("");
+}
 
 
 

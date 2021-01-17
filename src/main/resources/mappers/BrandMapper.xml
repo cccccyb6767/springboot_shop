@@ -8,14 +8,14 @@
     <select id="queryCount" parameterType="com.fh.springboot_shop.model.vo.BrandParam" resultType="java.lang.Long">
         select count(*) from t_shop_brand where 1=1 and isdel=0
         <if test="name!=null and name!=''">
-            and name=#{name}
+            and name like concat ('%','${name}','%')
         </if>
     </select>
 
     <select id="queryListParams" parameterType="com.fh.springboot_shop.model.vo.BrandParam" resultType="com.fh.springboot_shop.model.po.Brand">
         select * from t_shop_brand where 2=2 and isdel=0
         <if test="name!=null and name!=''">
-            and name=#{name}
+            and name like concat ('%','${name}','%')
         </if>
         limit ${size*(start-1)},#{size}
     </select>

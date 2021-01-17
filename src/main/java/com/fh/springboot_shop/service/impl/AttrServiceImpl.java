@@ -34,6 +34,7 @@ public class AttrServiceImpl implements AttrService {
 
     @Override
     public void addAttribute(shop_Attribute attr) {
+        attr.setIsDel(0);
         attrDao.addAttribute(attr);
     }
 
