@@ -13,4 +13,5 @@ public interface attrValueDao {
 
     List<attrValue> queryAttrValue();
 
+    void addAttrValue(attrValue attrval);
 }

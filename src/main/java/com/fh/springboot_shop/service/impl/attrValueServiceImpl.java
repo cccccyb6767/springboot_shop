@@ -25,4 +25,9 @@ public class attrValueServiceImpl implements attrValueService {
     public List<attrValue> queryAttrValue() {
         return attrValueDao.queryAttrValue();
     }
+
+    @Override
+    public void addAttrValue(attrValue attrval) {
+        attrValueDao.addAttrValue(attrval);
+    }
 }

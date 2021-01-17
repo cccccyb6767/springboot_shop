@@ -5,6 +5,7 @@ import com.fh.springboot_shop.service.attrValueService;
 import com.fh.springboot_shop.utils.ReturnData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,6 +29,13 @@ public class attrValueController {
     public ReturnData queryAttrValue(){
             List<attrValue>  attrValues=attrValueService.queryAttrValue();
         return ReturnData.successs(attrValues);
+    }
+
+
+    @PostMapping("addAttrValue")
+    public ReturnData addAttrValue(attrValue attrval){
+        attrValueService.addAttrValue(attrval);
+        return ReturnData.successs("success");
     }
 
 

@@ -12,4 +12,6 @@ import java.util.Map;
 public interface attrValueService {
 
     List<attrValue> queryAttrValue();
+
+    void addAttrValue(attrValue attrval);
 }
