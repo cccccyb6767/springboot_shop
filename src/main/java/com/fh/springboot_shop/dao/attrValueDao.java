@@ -1,6 +1,8 @@
 package com.fh.springboot_shop.dao;
 
+import com.fh.springboot_shop.model.po.Brand;
 import com.fh.springboot_shop.model.po.attrValue;
+import com.fh.springboot_shop.model.vo.BrandParam;
 
 import java.util.List;
 import java.util.Map;
@@ -11,7 +13,11 @@ import java.util.Map;
  */
 public interface attrValueDao {
 
-    List<attrValue> queryAttrValue();
+
 
     void addAttrValue(attrValue attrval);
+
+    Long queryCount(BrandParam attValueParam);
+
+    List<Brand> queryListParams(BrandParam attValueParam);
 }

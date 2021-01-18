@@ -1,6 +1,7 @@
 package com.fh.springboot_shop.service;
 
 import com.fh.springboot_shop.model.po.attrValue;
+import com.fh.springboot_shop.model.vo.BrandParam;
 
 import java.util.List;
 import java.util.Map;
@@ -11,7 +12,7 @@ import java.util.Map;
  */
 public interface attrValueService {
 
-    List<attrValue> queryAttrValue();
+    Map queryAttrValue(BrandParam attValueParam);
 
     void addAttrValue(attrValue attrval);
 }

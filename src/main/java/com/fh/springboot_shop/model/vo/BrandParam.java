@@ -8,6 +8,9 @@ import com.fh.springboot_shop.model.po.Brand;
  */
 public class BrandParam  {
 
+
+
+    private Integer  aid;
     private  Integer start;
     private  Integer size;
     private  String  name;
@@ -34,5 +37,12 @@ public class BrandParam  {
 
     public void setName(String name) {
         this.name = name;
+    }
+    public Integer getAid() {
+        return aid;
+    }
+
+    public void setAid(Integer aid) {
+        this.aid = aid;
     }
 }

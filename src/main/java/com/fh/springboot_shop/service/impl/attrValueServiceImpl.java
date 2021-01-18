@@ -2,11 +2,14 @@ package com.fh.springboot_shop.service.impl;
 
 
 import com.fh.springboot_shop.dao.attrValueDao;
+import com.fh.springboot_shop.model.po.Brand;
 import com.fh.springboot_shop.model.po.attrValue;
+import com.fh.springboot_shop.model.vo.BrandParam;
 import com.fh.springboot_shop.service.attrValueService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -22,8 +25,13 @@ public class attrValueServiceImpl implements attrValueService {
 
 
     @Override
-    public List<attrValue> queryAttrValue() {
-        return attrValueDao.queryAttrValue();
+    public Map queryAttrValue(BrandParam attValueParam) {
+        Map map = new HashMap();
+        Long count = attrValueDao.queryCount(attValueParam);
+        map.put("count",count);
+        List<Brand> brands = attrValueDao.queryListParams(attValueParam);
+        map.put("data",brands);
+        return map;
     }
 
     @Override
