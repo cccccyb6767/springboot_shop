@@ -3,6 +3,7 @@ package com.fh.springboot_shop.dao;
 import com.fh.springboot_shop.model.po.Brand;
 import com.fh.springboot_shop.model.po.shop_Attribute;
 import com.fh.springboot_shop.model.vo.BrandParam;
+import com.fh.springboot_shop.model.vo.SkuKShow;
 
 import java.util.List;
 
@@ -22,4 +23,6 @@ public interface AttrDao {
     void updateAttr(shop_Attribute attr);
 
     void delAttribute(Integer id);
+
+    List<SkuKShow> queryListParamsSkuKShow(BrandParam brandParam);
 }

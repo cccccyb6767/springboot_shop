@@ -14,6 +14,18 @@ public class BrandParam  {
     private  Integer start;
     private  Integer size;
     private  String  name;
+    private  Integer typeId;
+
+
+
+
+    public Integer getTypeId() {
+        return typeId;
+    }
+
+    public void setTypeId(Integer typeId) {
+        this.typeId = typeId;
+    }
 
     public Integer getStart() {
         return start;

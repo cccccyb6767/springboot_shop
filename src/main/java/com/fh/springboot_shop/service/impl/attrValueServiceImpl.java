@@ -29,13 +29,14 @@ public class attrValueServiceImpl implements attrValueService {
         Map map = new HashMap();
         Long count = attrValueDao.queryCount(attValueParam);
         map.put("count",count);
-        List<Brand> brands = attrValueDao.queryListParams(attValueParam);
+        List<attrValue> brands = attrValueDao.queryListParams(attValueParam);
         map.put("data",brands);
         return map;
     }
 
     @Override
     public void addAttrValue(attrValue attrval) {
+            attrval.setIsDel(0);
         attrValueDao.addAttrValue(attrval);
     }
 }

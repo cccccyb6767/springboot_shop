@@ -4,6 +4,7 @@ import com.fh.springboot_shop.dao.AttrDao;
 import com.fh.springboot_shop.model.po.Brand;
 import com.fh.springboot_shop.model.po.shop_Attribute;
 import com.fh.springboot_shop.model.vo.BrandParam;
+import com.fh.springboot_shop.model.vo.SkuKShow;
 import com.fh.springboot_shop.service.AttrService;
 import org.springframework.stereotype.Service;
 
@@ -27,8 +28,8 @@ public class AttrServiceImpl implements AttrService {
         Map map = new HashMap();
         Long count = attrDao.queryCount(brandParam);
         map.put("count",count);
-        List<shop_Attribute> brands = attrDao.queryListParams(brandParam);
-        map.put("data",brands);
+        List<SkuKShow> skuKShows = attrDao.queryListParamsSkuKShow(brandParam);
+        map.put("data",skuKShows);
         return map;
     }
 

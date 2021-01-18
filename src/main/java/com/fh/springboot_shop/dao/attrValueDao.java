@@ -19,5 +19,5 @@ public interface attrValueDao {
 
     Long queryCount(BrandParam attValueParam);
 
-    List<Brand> queryListParams(BrandParam attValueParam);
+    List<attrValue> queryListParams(BrandParam attValueParam);
 }
