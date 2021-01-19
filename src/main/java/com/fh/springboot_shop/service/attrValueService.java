@@ -17,4 +17,10 @@ public interface attrValueService {
     void addAttrValue(attrValue attrval);
 
     List<attrValue> queryDataByAid(Integer attrId);
+
+    attrValue queryAttrValueById(Integer id);
+
+    void updateAttrVue(attrValue aValue);
+
+    void delAttributeValue(Integer id);
 }

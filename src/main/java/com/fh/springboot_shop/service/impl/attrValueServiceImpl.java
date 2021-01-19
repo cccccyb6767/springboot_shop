@@ -44,4 +44,19 @@ public class attrValueServiceImpl implements attrValueService {
     public List<attrValue> queryDataByAid(Integer attrId) {
         return attrValueDao.queryDataByAid(attrId);
     }
+
+    @Override
+    public attrValue queryAttrValueById(Integer id) {
+        return attrValueDao.queryAttrValueById(id);
+    }
+
+    @Override
+    public void updateAttrVue(attrValue aValue) {
+        attrValueDao.updateAttrVue(aValue);
+    }
+
+    @Override
+    public void delAttributeValue(Integer id) {
+        attrValueDao.delAttributeValue(id);
+    }
 }

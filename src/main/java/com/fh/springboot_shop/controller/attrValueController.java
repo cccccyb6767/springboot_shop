@@ -1,6 +1,7 @@
 package com.fh.springboot_shop.controller;
 
 import com.fh.springboot_shop.model.po.attrValue;
+import com.fh.springboot_shop.model.po.shop_Attribute;
 import com.fh.springboot_shop.model.vo.BrandParam;
 import com.fh.springboot_shop.service.attrValueService;
 import com.fh.springboot_shop.utils.ReturnData;
@@ -36,6 +37,31 @@ public class attrValueController {
         attrValueService.addAttrValue(attrval);
         return ReturnData.successs("success");
     }
+
+
+
+    @GetMapping("queryAttrValueById")
+    public ReturnData queryAttrValueById(Integer id){
+        attrValue attVue = attrValueService.queryAttrValueById(id);
+        return ReturnData.successs(attVue);
+    }
+
+
+    @PostMapping("updateAttrVue")
+    public ReturnData updateAttrVue(attrValue aValue){
+        attrValueService.updateAttrVue(aValue);
+        return ReturnData.successs("success");
+    }
+
+    @DeleteMapping("delAttributeValue")
+    public ReturnData delAttributeValue(Integer id){
+        attrValueService.delAttributeValue(id);
+        return ReturnData.successs("success");
+    }
+
+
+
+
 
 
     @RequestMapping("queryDataByAid")

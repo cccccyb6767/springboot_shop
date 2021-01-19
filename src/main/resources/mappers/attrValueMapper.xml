@@ -28,4 +28,21 @@
           insert into t_shop_attrValue (name,nameCH,attId,isDel) value(#{name},#{nameCH},#{attId},#{isDel})
     </insert>
 
+
+    <select id="queryAttrValueById" parameterType="java.lang.Integer" resultType="com.fh.springboot_shop.model.po.attrValue">
+         select * from t_shop_attrValue where id=#{id}
+    </select>
+
+
+    <update id="updateAttrVue" parameterType="com.fh.springboot_shop.model.po.attrValue" >
+         update t_shop_attrValue set name=#{name},nameCH=#{nameCH} where id=#{id}
+    </update>
+
+
+    <delete id="delAttributeValue" parameterType="java.lang.Integer">
+         update t_shop_attrValue set isDel = 1 where id=#{id}
+    </delete>
+
+
+
 </mapper>

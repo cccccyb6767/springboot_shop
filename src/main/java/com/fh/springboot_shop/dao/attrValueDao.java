@@ -22,4 +22,10 @@ public interface attrValueDao {
     List<attrValue> queryListParams(BrandParam attValueParam);
 
     List<attrValue> queryDataByAid(Integer attrId);
+
+    void delAttributeValue(Integer id);
+
+    void updateAttrVue(attrValue aValue);
+
+    attrValue queryAttrValueById(Integer id);
 }
