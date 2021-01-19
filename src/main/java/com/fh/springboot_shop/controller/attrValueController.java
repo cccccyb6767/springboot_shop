@@ -38,4 +38,9 @@ public class attrValueController {
     }
 
 
+    @RequestMapping("queryDataByAid")
+    public ReturnData queryDataByAid(Integer attrId){
+        return ReturnData.successs(attrValueService.queryDataByAid(attrId));
+    }
+
 }

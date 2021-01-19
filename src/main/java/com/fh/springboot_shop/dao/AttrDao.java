@@ -25,4 +25,6 @@ public interface AttrDao {
     void delAttribute(Integer id);
 
     List<SkuKShow> queryListParamsSkuKShow(BrandParam brandParam);
+
+    List<shop_Attribute> queryDataByTypeId(Integer typeId);
 }

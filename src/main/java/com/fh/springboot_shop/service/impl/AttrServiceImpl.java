@@ -53,4 +53,9 @@ public class AttrServiceImpl implements AttrService {
     public void delAttribute(Integer id) {
         attrDao.delAttribute(id);
     }
+
+    @Override
+    public List<shop_Attribute> queryDataByTypeId(Integer typeId) {
+        return attrDao.queryDataByTypeId(typeId);
+    }
 }

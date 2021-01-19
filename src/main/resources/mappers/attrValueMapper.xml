@@ -18,6 +18,11 @@
 
 
 
+    <select id="queryDataByAid" parameterType="java.lang.Integer" resultType="com.fh.springboot_shop.model.po.attrValue">
+        select * from t_shop_attrvalue  where attId = #{attrId}
+    </select>
+
+
 
     <insert id="addAttrValue" parameterType="com.fh.springboot_shop.model.po.attrValue">
           insert into t_shop_attrValue (name,nameCH,attId,isDel) value(#{name},#{nameCH},#{attId},#{isDel})

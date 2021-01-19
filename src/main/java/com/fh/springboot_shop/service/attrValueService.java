@@ -15,4 +15,6 @@ public interface attrValueService {
     Map queryAttrValue(BrandParam attValueParam);
 
     void addAttrValue(attrValue attrval);
+
+    List<attrValue> queryDataByAid(Integer attrId);
 }

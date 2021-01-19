@@ -22,6 +22,13 @@ public class AttributeController {
     @Autowired
     private AttrService attrService;
 
+
+
+    @GetMapping("queryDataByTypeId")
+    public ReturnData queryDataByTypeId(Integer typeId){
+       return ReturnData.successs(attrService.queryDataByTypeId(typeId));
+    }
+
     @GetMapping("queryAttribute")
     public ReturnData queryAttribute(BrandParam brandParam){
         if(brandParam.getStart()==null){

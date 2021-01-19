@@ -20,4 +20,6 @@ public interface attrValueDao {
     Long queryCount(BrandParam attValueParam);
 
     List<attrValue> queryListParams(BrandParam attValueParam);
+
+    List<attrValue> queryDataByAid(Integer attrId);
 }

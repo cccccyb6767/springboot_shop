@@ -3,6 +3,7 @@ package com.fh.springboot_shop.service;
 import com.fh.springboot_shop.model.po.Brand;
 import com.fh.springboot_shop.model.vo.BrandParam;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -16,4 +17,6 @@ public interface BrandService {
     void updateBrand(Brand brand);
 
     void delBrand(Integer id);
+
+    List<Brand> queryBrandData();
 }

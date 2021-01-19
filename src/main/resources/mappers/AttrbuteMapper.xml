@@ -12,7 +12,7 @@
 
     <select id="queryListParamsSkuKShow" parameterType="com.fh.springboot_shop.model.vo.BrandParam" resultType="com.fh.springboot_shop.model.vo.SkuKShow">
 
-         SELECT DISTINCT tsa.id,tsa.`name`,tsa.nameCH,tsa.typeId,tsa.type,tst.`name` as typeName FROM t_shop_attribute  tsa LEFT JOIN t_shop_type tst on
+         SELECT DISTINCT tsa.id,tsa.`name`,tsa.nameCH,tsa.typeId,tsa.type,tst.`name` as typeName,tsa.isSKU,tsa.isDel FROM t_shop_attribute  tsa LEFT JOIN t_shop_type tst on
         tsa.typeId=tst.id
          where 3=3  and tsa.isDel=0
         limit ${size*(start-1)},#{size}
@@ -42,6 +42,11 @@
     <delete id="delAttribute" parameterType="java.lang.Integer">
          update t_shop_attribute set isDel = 1 where id=#{id}
     </delete>
+
+
+    <select id="queryDataByTypeId" parameterType="java.lang.Integer" resultType="com.fh.springboot_shop.model.po.shop_Attribute">
+        select * from t_shop_attribute where typeId= #{typeId} and isDel=0
+    </select>
 
 
 </mapper>

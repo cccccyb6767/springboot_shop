@@ -39,4 +39,9 @@ public class attrValueServiceImpl implements attrValueService {
             attrval.setIsDel(0);
         attrValueDao.addAttrValue(attrval);
     }
+
+    @Override
+    public List<attrValue> queryDataByAid(Integer attrId) {
+        return attrValueDao.queryDataByAid(attrId);
+    }
 }
