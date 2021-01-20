@@ -1,5 +1,6 @@
 package com.fh.springboot_shop.service;
 
+import com.fh.springboot_shop.model.po.Commodity;
 import com.fh.springboot_shop.model.vo.BrandParam;
 import com.fh.springboot_shop.model.vo.CommodityParam;
 
@@ -11,6 +12,5 @@ import java.util.Map;
  */
 public interface CommodityService {
     Map queryAttribute(CommodityParam comdity);
-
-
+    void addCommodity(Commodity commodity);
 }

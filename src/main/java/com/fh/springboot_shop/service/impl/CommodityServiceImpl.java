@@ -32,4 +32,9 @@ public class CommodityServiceImpl implements CommodityService {
         map.put("data",brands);
         return map;
     }
+
+    @Override
+    public void addCommodity(Commodity commodity) {
+        commodityDao.addCommodity(commodity);
+    }
 }

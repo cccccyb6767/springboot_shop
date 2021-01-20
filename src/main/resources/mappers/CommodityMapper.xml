@@ -12,4 +12,12 @@
         select * from t_shop_commodity where 2=2 and isDel=0
         limit ${size*(start-1)},#{size}
     </select>
+
+    <insert id="addCommodity" parameterType="com.fh.springboot_shop.model.po.Commodity">
+            insert into t_shop_commodity (name,title,brandId,typeId,productdecs,price,imgPath,stocks,sortNum,createDate,updateDate,author,isDel)
+             value(#{name},#{title},#{brandId},#{typeId},#{productdecs},#{price},#{imgPath},#{stocks},#{sortNum},sysdate(),sysdate(),#{author},#{isDel})
+    </insert>
+
+
+
 </mapper>

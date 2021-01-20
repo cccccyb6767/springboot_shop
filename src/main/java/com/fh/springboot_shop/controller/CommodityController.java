@@ -1,14 +1,12 @@
 package com.fh.springboot_shop.controller;
 
+import com.fh.springboot_shop.model.po.Commodity;
 import com.fh.springboot_shop.model.vo.BrandParam;
 import com.fh.springboot_shop.model.vo.CommodityParam;
 import com.fh.springboot_shop.service.CommodityService;
 import com.fh.springboot_shop.utils.ReturnData;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
@@ -35,6 +33,12 @@ public class CommodityController {
         }
         Map map = commodityService.queryAttribute(comdity);
         return ReturnData.successs(map);
+    }
+
+    @PostMapping("addCommodity")
+    public ReturnData addCommodity(Commodity commodity){
+        commodityService.addCommodity(commodity);
+        return ReturnData.successs("success");
     }
 
 

@@ -16,4 +16,5 @@ public interface CommodityDao {
     Long queryCount(CommodityParam comdity);
     List<Commodity> queryListParams(CommodityParam comdity);
 
+    void addCommodity(Commodity commodity);
 }
