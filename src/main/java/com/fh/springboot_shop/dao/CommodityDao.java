@@ -1,6 +1,7 @@
 package com.fh.springboot_shop.dao;
 
 import com.fh.springboot_shop.model.po.Commodity;
+import com.fh.springboot_shop.model.po.CommodityValue;
 import com.fh.springboot_shop.model.vo.BrandParam;
 import com.fh.springboot_shop.model.vo.CommodityParam;
 
@@ -17,4 +18,10 @@ public interface CommodityDao {
     List<Commodity> queryListParams(CommodityParam comdity);
 
     void addCommodity(Commodity commodity);
+
+    Commodity queryCommodityById(Integer id);
+
+    void updateCommodity(Commodity commodity);
+
+
 }

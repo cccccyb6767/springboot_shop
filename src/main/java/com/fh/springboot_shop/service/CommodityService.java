@@ -12,5 +12,13 @@ import java.util.Map;
  */
 public interface CommodityService {
     Map queryAttribute(CommodityParam comdity);
-    void addCommodity(Commodity commodity);
+
+
+
+    Commodity queryCommodityById(Integer id);
+
+    void updateCommodity(Commodity commodity);
+
+
+    void addCommodity(Commodity commodity, String attr, String sku);
 }

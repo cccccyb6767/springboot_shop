@@ -13,10 +13,30 @@
         limit ${size*(start-1)},#{size}
     </select>
 
-    <insert id="addCommodity" parameterType="com.fh.springboot_shop.model.po.Commodity">
+    <insert id="addCommodity"
+            useGeneratedKeys="true"
+            keyColumn="id"
+            keyProperty="id"
+            parameterType="com.fh.springboot_shop.model.po.Commodity">
             insert into t_shop_commodity (name,title,brandId,typeId,productdecs,price,imgPath,stocks,sortNum,createDate,updateDate,author,isDel)
              value(#{name},#{title},#{brandId},#{typeId},#{productdecs},#{price},#{imgPath},#{stocks},#{sortNum},sysdate(),sysdate(),#{author},#{isDel})
     </insert>
+
+
+    <select id="queryCommodityById" parameterType="java.lang.Integer" resultType="com.fh.springboot_shop.model.po.Commodity">
+         select * from t_shop_commodity where id=#{id}
+    </select>
+
+
+    <update id="updateCommodity" parameterType="com.fh.springboot_shop.model.po.Commodity" >
+         update t_shop_attrValue set name=#{name},title=#{title},brandId=#{brandId},typeId=#{typeId}
+         productdecs=#{productdecs},price=#{price},imgPath=#{imgPath},stocks=#{stocks},sortNum=#{sortNum}
+         ,createDate=sysdate(),updateDate=sysdate(),author=#{author},isDel=#{isDel}
+          where id=#{id}
+    </update>
+
+
+
 
 
 
